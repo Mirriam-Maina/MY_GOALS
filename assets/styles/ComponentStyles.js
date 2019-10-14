@@ -2,11 +2,12 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     inputView: {
-        flexDirection: "row",
-        justifyContent: 'space-between',
+        flex: 1,
+        justifyContent: 'center',
         alignItems: 'center'
       },
       inputField: {
+        marginBottom:10,
         borderColor: 'black',
         borderWidth: 1,
         width: '80%',

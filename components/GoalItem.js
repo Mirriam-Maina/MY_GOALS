@@ -9,7 +9,6 @@ const GoalItem = props => {
           <Text>{props.title}</Text>
         </View>
       </TouchableOpacity>
-
     );
 }
 

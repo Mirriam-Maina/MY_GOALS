@@ -19,6 +19,15 @@ export const styles = StyleSheet.create({
         backgroundColor: '#ccc',
         borderColor: 'black',
         borderWidth: 1
+      },
+      buttons: {
+        width: '50%',
+        flexDirection: 'row',
+        justifyContent:'space-between',
+        alignItems: 'center'
+      },
+      button: {
+        width: '40%'
       }
 
 });

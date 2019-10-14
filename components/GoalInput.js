@@ -3,8 +3,7 @@ import { styles } from '../assets/styles/ComponentStyles';
 import { TextInput, Button, View, Modal } from 'react-native';
 
 const GoalInput = props => {
-    const { changeTextHandler, onClickHandler, visible} = props;
-    console.log({visible})
+    const { changeTextHandler, onClickHandler, visible, onCancel} = props;
     return (
         <Modal visible={visible} animationType="slide">
         <View style={styles.inputView}>
@@ -13,7 +12,15 @@ const GoalInput = props => {
                 style={styles.inputField}
                 onChangeText={changeTextHandler}
             />
-            <Button title="ADD" onPress={onClickHandler} />
+            <View style={styles.buttons}>
+                <View style={styles.button}>
+                    <Button title="ADD" onPress={onClickHandler} />
+                </View>
+                <View style={styles.button}>
+                    <Button title="CANCEL"  color="red" onPress={onCancel}/>
+                </View>
+            </View>
+
         </View>
         </Modal>
     );

@@ -20,8 +20,11 @@ const Goals = props => {
         setModalVisibility(true);
     }
 
+    const onCancel = () => {
+        setModalVisibility(false);
+    }
+
     const onClickHandler = () => {
-      console.log('mirriam is here after click')
       setGoalsList(currentGoals => [...currentGoals, { id: Math.random().toString(), value: enteredGoal }]);
       setModalVisibility(currentState => false);
     }
@@ -35,6 +38,7 @@ const Goals = props => {
         <GoalInput
           onClickHandler = {onClickHandler}
           changeTextHandler = {changeTextHandler}
+          onCancel={onCancel}
           visible={modalVisibility}
         />
         <FlatList

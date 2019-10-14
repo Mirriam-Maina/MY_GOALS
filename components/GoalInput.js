@@ -1,5 +1,6 @@
 import React from 'react';
-import { TextInput, Button, StyleSheet, View } from 'react-native';
+import { styles } from '../assets/styles/ComponentStyles';
+import { TextInput, Button, View } from 'react-native';
 
 const GoalInput = props => {
     const { changeTextHandler, onClickHandler} = props;
@@ -13,21 +14,6 @@ const GoalInput = props => {
             <Button title="ADD" onPress={onClickHandler} />
       </View>
     );
-
 }
-
-const styles = StyleSheet.create({
-    inputView: {
-        flexDirection: "row",
-        justifyContent: 'space-between',
-        alignItems: 'center'
-      },
-      inputField: {
-        borderColor: 'black',
-        borderWidth: 1,
-        width: '80%',
-        padding: 10
-      }
-})
 
 export default GoalInput;
